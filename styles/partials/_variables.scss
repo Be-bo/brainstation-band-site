@@ -1,0 +1,116 @@
+// Breakpoints
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1280px;
+
+// Colors
+$primary-dark: #323232;
+$primary-silver: #afafaf;
+$primary-white: #ffffff;
+$secondary-dark-black: #000000;
+$secondary-mercury: #e1e1e1;
+$secondary-alabaster: #fafafa;
+$error-color: #d22d2d;
+
+// Typography (Hippography)
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('../../assets/Font/AvenirNextLTPro-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Avenir Next';
+    src: url('../../assets/Font/AvenirNextLTPro-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: bold;
+  }
+
+  @font-face {
+    font-family: 'Avenir Next';
+    src: url('../../assets/Font/AvenirNextLTPro-Demi.otf') format('opentype');
+    font-weight: 600;
+    font-style: bold;
+  }
+
+// Spacing
+$base-spacing-multiple: 4px;
+$padding-before-headlines-desktop: calc(12*$base-spacing-multiple);
+$pading-after-headlines-desktop: calc(9*$base-spacing-multiple);
+$padding-between-components-desktop: calc(9*$base-spacing-multiple);
+$padding-before-headlines-mobile: calc(6*$base-spacing-multiple);
+$padding-after-headlines-mobile: calc(4*$base-spacing-multiple);
+$padding-between-components-mobile: calc(4*$base-spacing-multiple);
+
+// Page Header
+$page-header-size-desktop: 60px;
+$page-header-line-height-desktop: 68px;
+$page-header-text-weight-desktop: 700;
+$page-header-size-mobile: 24px;
+$page-header-line-height-mobile: 32px;
+$page-header-text-weight-mobile: 700;
+
+// Section Header
+$section-header-size-desktop: 36px;
+$section-header-line-height-desktop: 44px;
+$section-header-text-weight-desktop: 700;
+$section-header-size-mobile: 24px;
+$section-header-line-height-mobile: 32px;
+$section-header-text-weight-mobile: 700;
+
+// Subheader
+$subheader-size-desktop: 24px;
+$subheader-line-height-desktop: 32px;
+$subheader-text-weight-desktop: 600;
+$subheader-size-mobile: 14px;
+$subheader-line-height-mobile: 22px;
+$subheader-text-weight-mobile: 600;
+
+// Body
+$body-size-desktop: 14px;
+$body-line-height-desktop: 22px;
+$body-text-weight-desktop: 400;
+$body-size-mobile: 13px;
+$body-line-height-mobile: 18px;
+$body-text-weight-mobile: 400;
+
+// Footer
+$footer-size-desktop: 14px;
+$footer-line-height-desktop: 20px;
+$footer-text-weight-desktop: 400;
+$footer-size-mobile: 13px;
+$footer-line-height-mobile: 18px;
+$footer-text-weight-mobile: 400;
+
+// Labels | Buttons | CTA
+$label-size-desktop: 12px;
+$labels-line-height-desktop: 20px;
+$labels-text-weight-desktop: 700;
+$label-size-mobile: 10px;
+$lables-line-height-mobile: 20px;
+$lables-text-weight-mobile: 700;
+$cta-btn-height: 40px;
+$cta-btn-width-desktop: 150px;
+$cta-btn-radius: $base-spacing-multiple;
+$cta-btn-left-right-padding: calc(8*$base-spacing-multiple);
+
+// Form Field
+$form-field-height-desktop: calc(12*$base-spacing-multiple);
+$form-field-height-mobile: calc(9*$base-spacing-multiple);
+$form-field-padding-desktop: calc(4*$base-spacing-multiple);
+$form-field-padding-mobile: calc(3*$base-spacing-multiple);
+$form-field-label-padding: $base-spacing-multiple;
+
+// Tables
+$table-top-padding-desktop: calc(6*$base-spacing-multiple);
+$table-left-right-padding-desktop: calc(4.5*$base-spacing-multiple);
+$table-universal-padding-mobile: calc(4*$base-spacing-multiple);
+
+// Other
+$logo-height: 20px;
+$logo-width: 120px;
+$divider-stroke-width: 1px;
+$form-field-radius: $base-spacing-multiple;
+$avatar-dimen-desktop: calc(12*$base-spacing-multiple);
+$avatar-dimen-mobile: calc(9*$base-spacing-multiple);
+$hero-opacity: 50%;

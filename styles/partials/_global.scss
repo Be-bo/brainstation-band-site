@@ -1,0 +1,66 @@
+@import 'variables';
+
+// MARK: RESPONSIVE
+@mixin tablet{
+    @media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media(min-width: $tablet-breakpoint){
+        @content;
+    }
+}
+
+
+// MARK: ELEMENT TAGS
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Avenir Next', sans-serif;
+}
+
+h1{
+    font-weight: $page-header-text-weight-mobile;
+    font-size: $page-header-size-mobile;
+    padding-top: $padding-before-headlines-mobile;
+}
+
+h2{
+    font-weight: $section-header-text-weight-mobile;
+    font-size: $section-header-size-mobile;
+    padding-top: $padding-before-headlines-mobile;
+}
+
+h3{
+    font-weight: $subheader-text-weight-mobile;
+    font-size: $subheader-size-mobile;
+    padding-top: $padding-before-headlines-mobile;
+}
+
+p{
+    font-size: $body-size-mobile;
+    font-weight: $body-text-weight-mobile;
+    padding-top: $padding-between-components-mobile;
+}
+
+
+// MARK: GENERAL
+.icon{
+    height: 30px;
+}
+
+.logo{
+    width: $logo-width;
+    height: $logo-height;
+}
+
+
+// MARK: OVERRIDES
+.text-bold{
+    font-weight: 700;
+}

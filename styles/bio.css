@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: bold;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Avenir Next", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 24px;
+  padding-top: 24px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+  padding-top: 24px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 14px;
+  padding-top: 24px;
+}
+
+p {
+  font-size: 13px;
+  font-weight: 400;
+  padding-top: 16px;
+}
+
+.icon {
+  height: 30px;
+}
+
+.logo {
+  width: 120px;
+  height: 20px;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.nav-bar {
+  background-color: #323232;
+  text-align: center;
+}
+.nav-bar__logo {
+  padding-top: 16px;
+}
+.nav-bar__menu {
+  display: flex;
+}
+.nav-bar__menu-item {
+  color: #ffffff;
+  text-decoration: none;
+  flex: 1;
+  padding: 16px;
+  cursor: pointer;
+}
+.nav-bar__item-selected {
+  border: solid;
+  border-width: 0 0 2px 0;
+  border-color: #ffffff;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  padding: 0 16px 16px 16px;
+}
+.footer h1 {
+  color: #ffffff;
+}
+.footer h3 {
+  color: #ffffff;
+}
+.footer p {
+  color: #ffffff;
+}
+.footer__social-container {
+  display: flex;
+  flex-shrink: 1;
+  gap: 16px;
+  padding-top: 16px;
+}
+.footer__logo {
+  padding-top: 40px;
+}
+
+.hero {
+  height: 40vh;
+  background-image: url("../assets/Images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero__title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  padding: 16px;
+  position: relative;
+  z-index: 2;
+  top: 40%;
+}
+.hero__overlay {
+  position: absolute;
+  background-color: black;
+  opacity: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.about {
+  padding: 0 16px 16px 16px;
+}
+.about__img {
+  max-width: 100%;
+  padding-top: 16px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 16px 16px;
+  gap: 16px;
+  background-color: #fafafa;
+}/*# sourceMappingURL=bio.css.map */
