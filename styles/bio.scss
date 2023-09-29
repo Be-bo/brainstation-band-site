@@ -7,58 +7,47 @@
     background-color: $primary-dark;
     text-align: center;
 
+    @include tablet{
+        text-align: left;
+        display: flex;
+    }
+
     &__logo{
         padding-top: $padding-between-components-mobile;
+
+        @include tablet{
+            flex: 1;
+            padding: $padding-between-components-desktop 0 $padding-between-components-desktop 0;
+        }
     }
 
     &__menu{
         display: flex;
+
+        @include tablet{
+            flex: 3;
+            gap: $padding-between-components-desktop;
+            align-items: center;
+        }
     }
 
     &__menu-item{
         color: $primary-white;
         text-decoration: none;
+        cursor: pointer;
         flex: 1;
         padding: $padding-between-components-mobile;
-        cursor: pointer;
+
+        @include tablet{
+            flex: 0;
+            padding: 0;
+        }
     }
 
     &__item-selected{
         border: solid;
         border-width: 0 0 2px 0;
         border-color: $primary-white;
-    }
-}
-
-
-// MARK: FOOTER
-.footer{
-    display: flex;
-    flex-direction: column;
-    background-color: $primary-dark;
-    padding: 0 $padding-between-components-mobile $padding-between-components-mobile $padding-between-components-mobile;
-
-    h1{
-        color: $primary-white;
-    }
-
-    h3{
-        color: $primary-white;
-    }
-
-    p{
-        color: $primary-white;
-    }
-
-    &__social-container{
-        display: flex;
-        flex-shrink: 1;
-        gap: $padding-between-components-mobile;
-        padding-top: $padding-between-components-mobile;
-    }
-
-    &__logo{
-        padding-top: calc(10*$base-spacing-multiple);
     }
 }
 
@@ -71,16 +60,18 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    display: flex;
 
     &__title{
         color: $primary-white;
-        font-size: $page-header-size-mobile;
-        font-weight: $page-header-text-weight-mobile;
-        line-height: $page-header-line-height-mobile;
         padding: $padding-between-components-mobile;
+        margin: auto 0;
         position: relative;
         z-index: 2;
-        top:40%;
+
+        @include tablet{
+            padding: $padding-between-components-desktop;
+        }
     }
 
     &__overlay{
@@ -99,18 +90,130 @@
 .about{
     padding: 0 $padding-between-components-mobile $padding-between-components-mobile $padding-between-components-mobile;
 
+    @include tablet{
+        padding: 0 $padding-between-components-desktop $padding-between-components-desktop $padding-between-components-desktop;
+    }
+
     &__img{
         max-width: 100%;
         padding-top: $padding-between-components-mobile;
+
+        @include tablet{
+            padding-top: $padding-between-components-desktop;
+        }
+    }
+
+    &__paragraph-container{
+        display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+            gap: $padding-between-components-desktop;
+        }
     }
 }
 
 
 // MARK: GALLERY
 .gallery{
+    padding: 0 $padding-between-components-mobile $padding-between-components-mobile $padding-between-components-mobile;
+    background-color: $secondary-alabaster;
+
+    @include tablet{
+        padding: 0 $padding-between-components-desktop $padding-between-components-desktop $padding-between-components-desktop;
+    }
+
+
+    &__photos{
+        display: flex;
+        flex-direction: column;
+        gap: $padding-between-components-mobile;
+        padding-top: $padding-between-components-mobile;
+
+        @include tablet{
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: $padding-between-components-desktop;
+            padding-top: $padding-between-components-desktop;
+        }
+    }
+
+
+    &__item{
+        
+        @include tablet{
+            max-width: 100%;
+        }
+    }
+}
+
+
+// MARK: FOOTER
+// TODO: potentially move elsewhere
+.footer{
     display: flex;
     flex-direction: column;
+    background-color: $primary-dark;
     padding: 0 $padding-between-components-mobile $padding-between-components-mobile $padding-between-components-mobile;
-    gap: $padding-between-components-mobile;
-    background-color: $secondary-alabaster;
+
+    @include tablet{
+        padding: 0 $padding-between-components-desktop $padding-between-components-desktop $padding-between-components-desktop;
+    }
+
+    h1{
+        color: $primary-white;
+    }
+
+    h3{
+        color: $primary-white;
+    }
+
+    p{
+        color: $primary-white;
+    }
+
+    &__title-container{
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: $padding-between-components-desktop;
+        }
+    }
+
+    &__social-container{
+        display: flex;
+        flex-shrink: 1;
+        gap: $padding-between-components-mobile;
+        padding-top: $padding-between-components-mobile;
+
+        @include tablet{
+            gap: $padding-between-components-desktop;
+            padding-top: $padding-between-components-desktop + 20px; // hacky approach but things simply don't line up with the design guide values
+        }
+    }
+
+    &__card-container{
+        display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-between;
+            gap: $padding-between-components-desktop;
+        }
+    }
+
+    &__card{
+        @include tablet{
+            flex: 1;
+        }
+    }
+
+    &__logo{
+        padding-top: calc(10*$base-spacing-multiple);
+    }
 }

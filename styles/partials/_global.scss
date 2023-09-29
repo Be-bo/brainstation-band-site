@@ -28,24 +28,45 @@ h1{
     font-weight: $page-header-text-weight-mobile;
     font-size: $page-header-size-mobile;
     padding-top: $padding-before-headlines-mobile;
+
+    @include tablet{
+        font-weight: $page-header-text-weight-desktop;
+        font-size: $page-header-size-desktop;
+        padding-top: $padding-before-headlines-desktop;
+    }
 }
 
 h2{
     font-weight: $section-header-text-weight-mobile;
     font-size: $section-header-size-mobile;
     padding-top: $padding-before-headlines-mobile;
+    @include tablet{
+        font-weight: $section-header-text-weight-desktop;
+        font-size: $section-header-size-desktop;
+        padding-top: $padding-before-headlines-desktop;
+    }
 }
 
 h3{
     font-weight: $subheader-text-weight-mobile;
     font-size: $subheader-size-mobile;
     padding-top: $padding-before-headlines-mobile;
+    @include tablet{
+        font-weight: $subheader-text-weight-desktop;
+        font-size: $subheader-size-desktop;
+        padding-top: $padding-before-headlines-desktop;
+    }
 }
 
 p{
     font-size: $body-size-mobile;
     font-weight: $body-text-weight-mobile;
     padding-top: $padding-between-components-mobile;
+    @include tablet{
+        font-size: $body-size-desktop;
+        font-weight: $body-text-weight-desktop;
+        padding-top: $padding-between-components-desktop;
+    }
 }
 
 
