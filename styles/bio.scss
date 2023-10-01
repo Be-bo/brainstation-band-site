@@ -1,6 +1,11 @@
 @import './partials/variables';
 @import './partials/global';
 
+
+// TODO: last TODOs = email & logo clicks + footer logo positioning
+
+
+
 // MARK: NAV BAR
 // TODO: potentially move elsewhere
 .nav-bar{
@@ -16,8 +21,11 @@
         padding-top: $padding-between-components-mobile;
 
         @include tablet{
-            flex: 1;
-            padding: $padding-between-components-desktop 0 $padding-between-components-desktop 0;
+            padding: $padding-between-components-desktop;
+        }
+
+        @include desktop{
+            padding: $padding-between-components-desktop $padding-between-components-desktop*2 $padding-between-components-desktop $padding-between-components-desktop*2;
         }
     }
 
@@ -41,6 +49,8 @@
         @include tablet{
             flex: 0;
             padding: 0;
+            align-self: stretch;
+            margin-top: $padding-between-components-desktop;
         }
     }
 
@@ -62,6 +72,10 @@
     position: relative;
     display: flex;
 
+    @include desktop{
+        height: 35vh;
+    }
+
     &__title{
         color: $primary-white;
         padding: $padding-between-components-mobile;
@@ -71,6 +85,10 @@
 
         @include tablet{
             padding: $padding-between-components-desktop;
+        }
+
+        @include desktop{
+            padding: 0 $padding-between-components-desktop*2;
         }
     }
 
@@ -92,6 +110,21 @@
 
     @include tablet{
         padding: 0 $padding-between-components-desktop $padding-between-components-desktop $padding-between-components-desktop;
+    }
+
+    @include desktop{
+        padding: 0 $padding-between-components-desktop*2 $padding-between-components-desktop*2 $padding-between-components-desktop*2;
+    }
+
+    &__inner-container{
+
+        @include tablet{
+            padding: 0 $padding-between-components-desktop*2;
+        }
+
+        @include desktop{
+            padding: 0 $padding-between-components-desktop*4;
+        }
     }
 
     &__img{
@@ -122,6 +155,10 @@
 
     @include tablet{
         padding: 0 $padding-between-components-desktop $padding-between-components-desktop $padding-between-components-desktop;
+    }
+
+    @include desktop{
+        padding: 0 $padding-between-components-desktop*2 $padding-between-components-desktop*2 $padding-between-components-desktop*2;
     }
 
 
@@ -161,6 +198,10 @@
 
     @include tablet{
         padding: 0 $padding-between-components-desktop $padding-between-components-desktop $padding-between-components-desktop;
+    }
+
+    @include desktop{
+        padding: 0 $padding-between-components-desktop*2 $padding-between-components-desktop*2 $padding-between-components-desktop*2;
     }
 
     h1{
@@ -210,6 +251,10 @@
     &__card{
         @include tablet{
             flex: 1;
+        }
+
+        a{
+            text-decoration: none;
         }
     }
 

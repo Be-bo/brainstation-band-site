@@ -2,7 +2,7 @@
 
 // MARK: RESPONSIVE
 @mixin tablet{
-    @media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint){
+    @media (min-width: $mobile-breakpoint){
         @content;
     }
 }
