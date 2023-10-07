@@ -1,0 +1,12 @@
+// MARK: RESPONSIVE
+@mixin tablet{
+    @media (min-width: $mobile-breakpoint){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media(min-width: $tablet-breakpoint){
+        @content;
+    }
+}

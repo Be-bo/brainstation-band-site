@@ -1,0 +1,230 @@
+// MARK: NAV BUR
+.nav-bar{
+    background-color: $primary-dark;
+    text-align: center;
+
+    @include tablet{
+        text-align: left;
+        display: flex;
+    }
+
+    &__logo{
+        width: $logo-width;
+        height: $logo-height;
+        margin-top: $padding-between-components-mobile;
+
+        @include tablet{
+            padding: $padding-between-components-desktop;
+        }
+
+        @include desktop{
+            padding: $padding-between-components-desktop $padding-between-components-desktop*2 $padding-between-components-desktop $padding-between-components-desktop*2;
+        }
+    }
+
+    &__menu{
+        display: flex;
+
+        @include tablet{
+            flex: 3;
+            gap: $padding-between-components-desktop;
+            align-items: center;
+        }
+    }
+
+    &__menu-item{
+        color: $primary-white;
+        text-decoration: none;
+        cursor: pointer;
+        flex: 1;
+        padding: $padding-between-components-mobile;
+
+        &--selected{
+            border: solid;
+            border-width: 0 0 0.125rem 0;
+            border-color: $primary-white;
+        }
+
+        @include tablet{
+            flex: 0;
+            padding: 0;
+            align-self: stretch;
+            margin-top: $padding-between-components-desktop*1.5;
+        }
+    }
+}
+
+
+// MARK: HERO
+.hero{
+    aspect-ratio: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: $padding-between-components-mobile;
+    padding: $padding-between-components-mobile*2 $padding-between-components-mobile;
+
+    @include tablet{
+        padding: $padding-between-components-desktop;
+    }
+
+    @include desktop{
+        flex-direction: row;
+        align-items: center;
+        padding: 0 $padding-between-components-desktop*2;
+    }
+
+    &__title-container{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-evenly;
+
+        @include desktop{
+            flex: 1;
+        }
+    }
+
+    &__title{
+        color: $primary-white;
+        padding-top: 0;
+        position: relative;
+        z-index: 1;
+
+        @include desktop{
+            padding-top: $padding-between-components-desktop;
+        }
+    }
+
+    &__iframe{
+        @include desktop{
+            flex: 1;
+            flex-grow: 1;
+            margin-top: $padding-between-components-desktop*3;
+        }
+    }
+
+    &__overlay{
+        position: absolute;
+        background-color: black;
+        opacity: $hero-opacity;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+// MARK: FOOTER
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-dark;
+    padding: 0 $padding-between-components-mobile $padding-between-components-mobile $padding-between-components-mobile;
+
+    @include tablet{
+        padding: 0 $padding-between-components-desktop $padding-between-components-desktop $padding-between-components-desktop;
+    }
+
+    @include desktop{
+        padding: 0 $padding-between-components-desktop*2 $padding-between-components-desktop*2 $padding-between-components-desktop*2;
+    }
+
+    &__heading{
+        color: $primary-white;
+    }
+
+    &__card-heading{
+        color: $primary-white;
+    }
+
+    &__text{
+        color: $primary-white;
+    }
+
+    &__link{
+        color: $primary-white;
+        text-decoration: none;
+    }
+
+    &__title-container{
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: $padding-between-components-desktop;
+        }
+    }
+
+    &__social-container{
+        display: flex;
+        flex-shrink: 1;
+        gap: $padding-between-components-mobile;
+        margin-top: $padding-between-components-mobile;
+
+        @include tablet{
+            gap: $padding-between-components-desktop;
+            margin-top: $padding-between-components-desktop + 1.25rem;
+        }
+    }
+
+    &__card-container{
+        display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-between;
+            gap: $padding-between-components-desktop;
+        }
+    }
+
+    &__card{
+        @include tablet{
+            flex: 1;
+        }
+    }
+
+    &__logo{
+        width: $logo-width;
+        height: $logo-height;
+        margin-top: calc(10*$base-spacing-multiple);
+    }
+}
+
+
+// MARK: GENERAL
+.icon{
+    height: 1.875rem;
+}
+
+.btn{
+    margin-top: $padding-between-components-mobile;
+    width: 100%;
+    height: $cta-btn-height;
+    border-radius: $cta-btn-radius;
+    border: none;
+    color: $primary-white;
+    background-color: $primary-dark;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @include tablet{
+        width: $cta-btn-width-desktop;
+    }
+}
+
+
+// MARK: OVERRIDES
+.text-bold{
+    font-weight: 700;
+}
+
+.flex1{
+    flex: 1;
+}

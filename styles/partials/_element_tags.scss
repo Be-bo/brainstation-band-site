@@ -1,20 +1,6 @@
 @import 'variables';
+@import 'font';
 
-// MARK: RESPONSIVE
-@mixin tablet{
-    @media (min-width: $mobile-breakpoint){
-        @content;
-    }
-}
-
-@mixin desktop{
-    @media(min-width: $tablet-breakpoint){
-        @content;
-    }
-}
-
-
-// MARK: ELEMENT TAGS
 *{
     margin: 0;
     padding: 0;
@@ -67,21 +53,4 @@ p{
         font-weight: $body-text-weight-desktop;
         padding-top: $padding-between-components-desktop;
     }
-}
-
-
-// MARK: GENERAL
-.icon{
-    height: 30px;
-}
-
-.logo{
-    width: $logo-width;
-    height: $logo-height;
-}
-
-
-// MARK: OVERRIDES
-.text-bold{
-    font-weight: 700;
 }

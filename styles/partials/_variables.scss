@@ -11,30 +11,8 @@ $secondary-mercury: #e1e1e1;
 $secondary-alabaster: #fafafa;
 $error-color: #d22d2d;
 
-// Typography (Hippography)
-@font-face {
-    font-family: 'Avenir Next';
-    src: url('../../assets/Font/AvenirNextLTPro-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Avenir Next';
-    src: url('../../assets/Font/AvenirNextLTPro-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: bold;
-  }
-
-  @font-face {
-    font-family: 'Avenir Next';
-    src: url('../../assets/Font/AvenirNextLTPro-Demi.otf') format('opentype');
-    font-weight: 600;
-    font-style: bold;
-  }
-
 // Spacing
-$base-spacing-multiple: 4px;
+$base-spacing-multiple: 0.25rem;
 $padding-before-headlines-desktop: calc(12*$base-spacing-multiple);
 $pading-after-headlines-desktop: calc(9*$base-spacing-multiple);
 $padding-between-components-desktop: calc(9*$base-spacing-multiple);
@@ -43,54 +21,54 @@ $padding-after-headlines-mobile: calc(4*$base-spacing-multiple);
 $padding-between-components-mobile: calc(4*$base-spacing-multiple);
 
 // Page Header
-$page-header-size-desktop: 60px;
-$page-header-line-height-desktop: 68px;
+$page-header-size-desktop: 3.75rem;
+$page-header-line-height-desktop: 4.25rem;
 $page-header-text-weight-desktop: 700;
-$page-header-size-mobile: 24px;
-$page-header-line-height-mobile: 32px;
+$page-header-size-mobile: 1.5rem;
+$page-header-line-height-mobile: 2rem;
 $page-header-text-weight-mobile: 700;
 
 // Section Header
-$section-header-size-desktop: 36px;
-$section-header-line-height-desktop: 44px;
+$section-header-size-desktop: 2.25rem;
+$section-header-line-height-desktop: 2.75rem;
 $section-header-text-weight-desktop: 700;
-$section-header-size-mobile: 24px;
-$section-header-line-height-mobile: 32px;
+$section-header-size-mobile: 1.5rem;
+$section-header-line-height-mobile: 2rem;
 $section-header-text-weight-mobile: 700;
 
 // Subheader
-$subheader-size-desktop: 24px;
-$subheader-line-height-desktop: 32px;
+$subheader-size-desktop: 1.5rem;
+$subheader-line-height-desktop: 2rem;
 $subheader-text-weight-desktop: 600;
-$subheader-size-mobile: 14px;
-$subheader-line-height-mobile: 22px;
+$subheader-size-mobile: 0.875rem;
+$subheader-line-height-mobile: 1.375rem;
 $subheader-text-weight-mobile: 600;
 
 // Body
-$body-size-desktop: 14px;
-$body-line-height-desktop: 22px;
+$body-size-desktop: 0.875rem;
+$body-line-height-desktop: 1.375rem;
 $body-text-weight-desktop: 400;
-$body-size-mobile: 13px;
-$body-line-height-mobile: 18px;
+$body-size-mobile: 0.812rem;
+$body-line-height-mobile: 1.125rem;
 $body-text-weight-mobile: 400;
 
 // Footer
-$footer-size-desktop: 14px;
-$footer-line-height-desktop: 20px;
+$footer-size-desktop: 0.875rem;
+$footer-line-height-desktop: 1.25rem;
 $footer-text-weight-desktop: 400;
-$footer-size-mobile: 13px;
-$footer-line-height-mobile: 18px;
+$footer-size-mobile: 0.812rem;
+$footer-line-height-mobile: 1.125rem;
 $footer-text-weight-mobile: 400;
 
 // Labels | Buttons | CTA
-$label-size-desktop: 12px;
-$labels-line-height-desktop: 20px;
+$label-size-desktop: 0.75rem;
+$labels-line-height-desktop: 1.25rem;
 $labels-text-weight-desktop: 700;
-$label-size-mobile: 10px;
-$lables-line-height-mobile: 20px;
+$label-size-mobile: 0.625rem;
+$lables-line-height-mobile: 1.25rem;
 $lables-text-weight-mobile: 700;
-$cta-btn-height: 40px;
-$cta-btn-width-desktop: 150px;
+$cta-btn-height: 2.5rem;
+$cta-btn-width-desktop: 9.375rem;
 $cta-btn-radius: $base-spacing-multiple;
 $cta-btn-left-right-padding: calc(8*$base-spacing-multiple);
 
@@ -107,9 +85,9 @@ $table-left-right-padding-desktop: calc(4.5*$base-spacing-multiple);
 $table-universal-padding-mobile: calc(4*$base-spacing-multiple);
 
 // Other
-$logo-height: 20px;
-$logo-width: 120px;
-$divider-stroke-width: 1px;
+$logo-height: 1.25rem;
+$logo-width: 7.5rem;
+$divider-stroke-width: 0.062rem;
 $form-field-radius: $base-spacing-multiple;
 $avatar-dimen-desktop: calc(12*$base-spacing-multiple);
 $avatar-dimen-mobile: calc(9*$base-spacing-multiple);

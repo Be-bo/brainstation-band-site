@@ -1,108 +1,13 @@
+@import './partials/mixin';
 @import './partials/variables';
-@import './partials/global';
-
-
-// TODO: last TODOs = email & logo clicks + footer logo positioning
-
-
-
-// MARK: NAV BAR
-// TODO: potentially move elsewhere
-.nav-bar{
-    background-color: $primary-dark;
-    text-align: center;
-
-    @include tablet{
-        text-align: left;
-        display: flex;
-    }
-
-    &__logo{
-        padding-top: $padding-between-components-mobile;
-
-        @include tablet{
-            padding: $padding-between-components-desktop;
-        }
-
-        @include desktop{
-            padding: $padding-between-components-desktop $padding-between-components-desktop*2 $padding-between-components-desktop $padding-between-components-desktop*2;
-        }
-    }
-
-    &__menu{
-        display: flex;
-
-        @include tablet{
-            flex: 3;
-            gap: $padding-between-components-desktop;
-            align-items: center;
-        }
-    }
-
-    &__menu-item{
-        color: $primary-white;
-        text-decoration: none;
-        cursor: pointer;
-        flex: 1;
-        padding: $padding-between-components-mobile;
-
-        @include tablet{
-            flex: 0;
-            padding: 0;
-            align-self: stretch;
-            margin-top: $padding-between-components-desktop;
-        }
-    }
-
-    &__item-selected{
-        border: solid;
-        border-width: 0 0 2px 0;
-        border-color: $primary-white;
-    }
-}
-
+@import './partials/font';
+@import './partials/element_tags';
+@import './partials/global_classes';
 
 // MARK: HERO
 .hero{
-    height: 40vh;
     background-image: url("../assets/Images/hero-bio.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-
-    @include desktop{
-        height: 35vh;
-    }
-
-    &__title{
-        color: $primary-white;
-        padding: $padding-between-components-mobile;
-        margin: auto 0;
-        position: relative;
-        z-index: 2;
-
-        @include tablet{
-            padding: $padding-between-components-desktop;
-        }
-
-        @include desktop{
-            padding: 0 $padding-between-components-desktop*2;
-        }
-    }
-
-    &__overlay{
-        position: absolute;
-        background-color: black;
-        opacity: $hero-opacity;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
 }
-
 
 // MARK: ABOUT
 .about{
@@ -184,81 +89,5 @@
         @include tablet{
             max-width: 100%;
         }
-    }
-}
-
-
-// MARK: FOOTER
-// TODO: potentially move elsewhere
-.footer{
-    display: flex;
-    flex-direction: column;
-    background-color: $primary-dark;
-    padding: 0 $padding-between-components-mobile $padding-between-components-mobile $padding-between-components-mobile;
-
-    @include tablet{
-        padding: 0 $padding-between-components-desktop $padding-between-components-desktop $padding-between-components-desktop;
-    }
-
-    @include desktop{
-        padding: 0 $padding-between-components-desktop*2 $padding-between-components-desktop*2 $padding-between-components-desktop*2;
-    }
-
-    h1{
-        color: $primary-white;
-    }
-
-    h3{
-        color: $primary-white;
-    }
-
-    p{
-        color: $primary-white;
-    }
-
-    &__title-container{
-        @include tablet{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: $padding-between-components-desktop;
-        }
-    }
-
-    &__social-container{
-        display: flex;
-        flex-shrink: 1;
-        gap: $padding-between-components-mobile;
-        padding-top: $padding-between-components-mobile;
-
-        @include tablet{
-            gap: $padding-between-components-desktop;
-            padding-top: $padding-between-components-desktop + 20px; // hacky approach but things simply don't line up with the design guide values
-        }
-    }
-
-    &__card-container{
-        display: flex;
-        flex-direction: column;
-
-        @include tablet{
-            flex-direction: row;
-            justify-content: space-between;
-            gap: $padding-between-components-desktop;
-        }
-    }
-
-    &__card{
-        @include tablet{
-            flex: 1;
-        }
-
-        a{
-            text-decoration: none;
-        }
-    }
-
-    &__logo{
-        padding-top: calc(10*$base-spacing-multiple);
     }
 }

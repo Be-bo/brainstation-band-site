@@ -1,0 +1,119 @@
+@import './partials/mixin';
+@import './partials/variables';
+@import './partials/font';
+@import './partials/element_tags';
+@import './partials/global_classes';
+
+// MARK: HERO
+.hero{
+    background-image: url("../assets/Images/hero-shows.jpg");
+
+    &__iframe{
+        z-index: 1;
+    }
+}
+
+
+// MARK: SHOWS
+.shows{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $padding-between-components-mobile;
+
+    @include desktop{
+        flex-direction: row;
+    }
+
+    &__title{
+        padding: $padding-between-components-mobile $padding-between-components-mobile $padding-between-components-mobile/2 $padding-between-components-mobile;
+
+        @include tablet{
+            padding: $padding-between-components-desktop;
+        }
+
+        @include desktop{
+            padding: $padding-between-components-desktop $padding-between-components-desktop*2;
+        }
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+
+        @include tablet{
+            padding: 0 $padding-between-components-desktop/2 0 $padding-between-components-desktop/2;
+        }
+
+        @include desktop{
+            padding: $padding-between-components-desktop*2 $padding-between-components-desktop*2 $padding-between-components-desktop 0;
+        }
+    }
+
+    &__title-card{
+        display: none;
+        padding: 0 $padding-between-components-mobile $padding-between-components-mobile $padding-between-components-mobile;
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 0;
+        }
+
+        @include desktop{
+
+        }
+    }
+
+    &__title-filler{
+        flex: 1;
+    }
+
+    &__card{
+        padding: 0 $padding-between-components-mobile $padding-between-components-mobile $padding-between-components-mobile;
+
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: $padding-between-components-mobile;
+        }
+    }
+
+    &__divider{
+        height: 1px;
+        background-color: $primary-silver;
+    }
+
+    &__card-title{
+        flex: 1;
+        text-transform: uppercase;
+        color: $primary-silver;
+
+        @include tablet{
+            display: none;
+        }
+
+        &--header{
+            display: flex;
+            flex: 1;
+            text-transform: uppercase;
+            color: $primary-silver;
+            padding-top: 0;
+        }
+    }
+
+    &__card-text{
+        flex: 1;
+        padding-top: $padding-between-components-mobile/3;
+    }
+
+    &__card-date{
+        flex: 1;
+        font-weight: 600;
+        padding-top: $padding-between-components-mobile/3;
+    }
+}
