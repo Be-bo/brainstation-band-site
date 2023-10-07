@@ -342,7 +342,6 @@ textarea:focus {
 }
 
 .btn {
-  margin-top: 1rem;
   width: 100%;
   height: 2.5rem;
   border-radius: 0.25rem;
@@ -360,10 +359,6 @@ textarea:focus {
 
 .text-bold {
   font-weight: 700;
-}
-
-.flex1 {
-  flex: 1;
 }
 
 .hero {
@@ -468,4 +463,13 @@ textarea:focus {
   flex: 1;
   font-weight: 600;
   padding-top: 0.3333333333rem;
+}
+.shows__card-btn {
+  flex: 1;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .shows__card-btn {
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=shows.css.map */

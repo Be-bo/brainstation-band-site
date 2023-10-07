@@ -18,17 +18,17 @@
     }
 
     @include desktop{
-        padding: 0 $padding-between-components-desktop*2 $padding-between-components-desktop*2 $padding-between-components-desktop*2;
+        padding: 0 calc($padding-between-components-desktop*2) calc($padding-between-components-desktop*2) calc($padding-between-components-desktop*2);
     }
 
     &__inner-container{
 
         @include tablet{
-            padding: 0 $padding-between-components-desktop*2;
+            padding: 0 calc($padding-between-components-desktop*2);
         }
 
         @include desktop{
-            padding: 0 $padding-between-components-desktop*4;
+            padding: 0 calc($padding-between-components-desktop*4);
         }
     }
 
@@ -63,7 +63,7 @@
     }
 
     @include desktop{
-        padding: 0 $padding-between-components-desktop*2 $padding-between-components-desktop*2 $padding-between-components-desktop*2;
+        padding: 0 calc($padding-between-components-desktop*2) calc($padding-between-components-desktop*2) calc($padding-between-components-desktop*2);
     }
 
 
@@ -97,9 +97,33 @@
 .comments{
     display: flex;
     flex-direction: column;
-    gap: $padding-between-components-mobile;
-    padding: $padding-between-components-mobile;
-    background-color: $primary-white;
+    align-items: center;
+
+    &__title{
+        align-self: flex-start;
+        padding-left: $padding-between-components-mobile;
+
+        @include tablet{
+            padding-left: $padding-between-components-desktop;
+        }
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: $padding-between-components-mobile;
+        padding: 0 $padding-between-components-mobile $padding-between-components-mobile $padding-between-components-mobile;
+        background-color: $primary-white;
+
+        @include tablet{
+            padding: 0 $padding-between-components-desktop $padding-between-components-desktop $padding-between-components-desktop;
+            max-width: $mobile-breakpoint;
+        }
+
+        @include desktop{
+            max-width: $tablet-breakpoint;
+        }
+    }
 
     &__input{
         display: flex;
@@ -114,6 +138,12 @@
         background-image: url("../assets/Images/Mohan-muruge.jpg");
         background-position: left;
         background-size: cover;
+
+        @include tablet{
+            width: $avatar-dimen-desktop;
+            height: $avatar-dimen-desktop;
+            margin-top: calc($padding-between-components-desktop*1.75);
+        }
     }
 
     &__avatar{
@@ -122,6 +152,11 @@
         aspect-ratio: 1;
         border-radius: 50%;
         background-color: $primary-silver;
+
+        @include tablet{
+            width: $avatar-dimen-desktop;
+            height: $avatar-dimen-desktop;
+        }
     }
 
     &__input-container{
@@ -132,7 +167,7 @@
 
     &__input-name{
         height: $avatar-dimen-mobile;
-        padding: 0 $padding-between-components-mobile/2;
+        padding: 0 calc($padding-between-components-mobile/2);
 
         @include tablet{
             height: $avatar-dimen-desktop;
@@ -140,12 +175,20 @@
     }
 
     &__input-text{
-        padding: $padding-between-components-mobile/2;
+        padding: calc($padding-between-components-mobile/2);
     }
 
-    &__title{
+    &__button{
+        margin-top: $padding-between-components-mobile;
+
+        @include tablet{
+            margin-top: $padding-between-components-desktop;
+        }
+    }
+
+    &__input-title{
         padding-top: $padding-between-components-mobile;
-        padding-bottom: $padding-between-components-mobile/2;
+        padding-bottom: calc($padding-between-components-mobile/2);
 
         @include tablet{
             padding-top: $padding-between-components-desktop;
@@ -175,6 +218,14 @@
     &__card-date{
         color: $primary-silver;
         padding-top: 0;
+    }
+
+    &__card-comment{
+        padding-top: calc($padding-between-components-mobile/2);
+
+        @include tablet{
+            padding-top: calc($padding-between-components-desktop/6);
+        }
     }
 
     &__divider{

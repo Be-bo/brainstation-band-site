@@ -342,7 +342,6 @@ textarea:focus {
 }
 
 .btn {
-  margin-top: 1rem;
   width: 100%;
   height: 2.5rem;
   border-radius: 0.25rem;
@@ -360,10 +359,6 @@ textarea:focus {
 
 .text-bold {
   font-weight: 700;
-}
-
-.flex1 {
-  flex: 1;
 }
 
 .hero {
@@ -452,9 +447,34 @@ textarea:focus {
 .comments {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.comments__title {
+  align-self: flex-start;
+  padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .comments__title {
+    padding-left: 2.25rem;
+  }
+}
+.comments__container {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   background-color: #ffffff;
+}
+@media (min-width: 768px) {
+  .comments__container {
+    padding: 0 2.25rem 2.25rem 2.25rem;
+    max-width: 768px;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__container {
+    max-width: 1280px;
+  }
 }
 .comments__input {
   display: flex;
@@ -469,12 +489,25 @@ textarea:focus {
   background-position: left;
   background-size: cover;
 }
+@media (min-width: 768px) {
+  .comments__input-avatar {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 3.9375rem;
+  }
+}
 .comments__avatar {
   width: 2.25rem;
   height: 2.25rem;
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: #afafaf;
+}
+@media (min-width: 768px) {
+  .comments__avatar {
+    width: 3rem;
+    height: 3rem;
+  }
 }
 .comments__input-container {
   display: flex;
@@ -493,12 +526,20 @@ textarea:focus {
 .comments__input-text {
   padding: 0.5rem;
 }
-.comments__title {
+.comments__button {
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .comments__button {
+    margin-top: 2.25rem;
+  }
+}
+.comments__input-title {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
-  .comments__title {
+  .comments__input-title {
     padding-top: 2.25rem;
   }
 }
@@ -521,6 +562,14 @@ textarea:focus {
 .comments__card-date {
   color: #afafaf;
   padding-top: 0;
+}
+.comments__card-comment {
+  padding-top: 0.5rem;
+}
+@media (min-width: 768px) {
+  .comments__card-comment {
+    padding-top: 0.375rem;
+  }
 }
 .comments__divider {
   height: 1px;

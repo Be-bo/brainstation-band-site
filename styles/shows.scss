@@ -116,4 +116,13 @@
         font-weight: 600;
         padding-top: $padding-between-components-mobile/3;
     }
+
+    &__card-btn{
+        flex: 1;
+        margin-top: $padding-between-components-mobile;
+
+        @include tablet{
+            margin-top: 0;
+        }
+    }
 }

@@ -204,7 +204,7 @@
 }
 
 .btn{
-    margin-top: $padding-between-components-mobile;
+    // margin-top: $padding-between-components-mobile; // TODO: fix
     width: 100%;
     height: $cta-btn-height;
     border-radius: $cta-btn-radius;
@@ -223,8 +223,4 @@
 // MARK: OVERRIDES
 .text-bold{
     font-weight: 700;
-}
-
-.flex1{
-    flex: 1;
 }
