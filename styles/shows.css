@@ -95,6 +95,58 @@ p {
   }
 }
 
+label {
+  text-transform: uppercase;
+  color: #afafaf;
+  font-size: 0.812rem;
+}
+@media (min-width: 768px) {
+  label {
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+}
+
+input {
+  font-family: "Avenir Next", sans-serif;
+  background-color: #fafafa;
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+  outline: none;
+  font-size: 0.812rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  input {
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+}
+
+input:focus {
+  border-color: #323232;
+}
+
+textarea {
+  font-family: "Avenir Next", sans-serif;
+  background-color: #fafafa;
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+  outline: none;
+  font-size: 0.812rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  textarea {
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+}
+
+textarea:focus {
+  border-color: #323232;
+}
+
 .nav-bar {
   background-color: #323232;
   text-align: center;

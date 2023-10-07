@@ -54,3 +54,51 @@ p{
         padding-top: $padding-between-components-desktop;
     }
 }
+
+label{
+    text-transform: uppercase;
+    color: $primary-silver;
+    font-size: $body-size-mobile;
+    @include tablet{
+        font-size: $body-size-desktop;
+        font-weight: $body-text-weight-desktop;
+    }
+}
+
+input{
+    font-family: 'Avenir Next', sans-serif;
+    background-color: $secondary-alabaster;
+    border: 1px solid $primary-silver;
+    border-radius: 4px;
+    outline: none;
+
+    font-size: $body-size-mobile;
+    font-weight: $body-text-weight-mobile;
+    @include tablet{
+        font-size: $body-size-desktop;
+        font-weight: $body-text-weight-desktop;
+    }
+}
+
+input:focus{
+    border-color: $primary-dark;
+}
+
+textarea{
+    font-family: 'Avenir Next', sans-serif;
+    background-color: $secondary-alabaster;
+    border: 1px solid $primary-silver;
+    border-radius: 4px;
+    outline: none;
+
+    font-size: $body-size-mobile;
+    font-weight: $body-text-weight-mobile;
+    @include tablet{
+        font-size: $body-size-desktop;
+        font-weight: $body-text-weight-desktop;
+    }
+}
+
+textarea:focus{
+    border-color: $primary-dark;
+}

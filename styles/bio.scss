@@ -95,26 +95,66 @@
 
 // MARK: COMMENTS
 .comments{
+    display: flex;
+    flex-direction: column;
+    gap: $padding-between-components-mobile;
     padding: $padding-between-components-mobile;
     background-color: $primary-white;
 
     &__input{
         display: flex;
+        gap: $padding-between-components-mobile;
+    }
+
+    &__input-avatar{
+        width: $avatar-dimen-mobile;
+        height: $avatar-dimen-mobile;
+        border-radius: 50%;
+        margin-top: $padding-between-components-mobile*2.5;
+        background-image: url("../assets/Images/Mohan-muruge.jpg");
+        background-position: left;
+        background-size: cover;
     }
 
     &__avatar{
         width: $avatar-dimen-mobile;
         height: $avatar-dimen-mobile;
+        aspect-ratio: 1;
         border-radius: 50%;
+        background-color: $primary-silver;
     }
 
     &__input-container{
         display: flex;
         flex-direction: column;
+        flex: 1;
+    }
+
+    &__input-name{
+        height: $avatar-dimen-mobile;
+        padding: 0 $padding-between-components-mobile/2;
+
+        @include tablet{
+            height: $avatar-dimen-desktop;
+        }
+    }
+
+    &__input-text{
+        padding: $padding-between-components-mobile/2;
+    }
+
+    &__title{
+        padding-top: $padding-between-components-mobile;
+        padding-bottom: $padding-between-components-mobile/2;
+
+        @include tablet{
+            padding-top: $padding-between-components-desktop;
+        }
     }
 
     &__card{
         display: flex;
+        gap: $padding-between-components-mobile;
     }
 
     &__card-text-container{
@@ -124,6 +164,17 @@
 
     &__card-header{
         display: flex;
+        justify-content: space-between;
+    }
+
+    &__card-name{
+        font-weight: 600;
+        padding-top: 0;
+    }
+
+    &__card-date{
+        color: $primary-silver;
+        padding-top: 0;
     }
 
     &__divider{

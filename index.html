@@ -89,26 +89,27 @@
 
             <!-- MARK: INPUT FORM -->
             <article class="comments__input">
-                <img class="comments__avatar" src="./assets/Images/Mohan-muruge.jpg">
+                <div class="comments__input-avatar"></div>
                 
                 <form class="comments__input-container">
-                    <label for="username">Name</label>
-                    <input type="text" name="username" placeholder="Enter your name" required/>
+                    <label class="comments__title" for="username">Name</label>
+                    <input class="comments__input-name" type="text" name="username" placeholder="Enter your name" required/>
 
-                    <label for="comment">Comment</label>
-                    <textarea name="comment" placeholder="Add a new comment" required></textarea>
+                    <label class="comments__title" for="comment">Comment</label>
+                    <textarea class="comments__input-text" name="comment" placeholder="Add a new comment" required></textarea>
 
                     <button class="btn" type="submit">Comment</button>
                 </form>
             </article>
 
             <!-- MARK: POSTED COMMENTS -->
+            <div class="comments__divider"></div>
             <article class="comments__card">
-                <img class="comments__avatar" src="./assets/Images/Mohan-muruge.jpg">
+                <div class="comments__avatar"></div>
                 <div class="comments__card-text-container">
                     <div class="comments__card-header">
-                        <p>Connor Walton</p>
-                        <p>02/17/2021</p>
+                        <p class="comments__card-name">Connor Walton</p>
+                        <p class="comments__card-date">02/17/2021</p>
                     </div>
                     <p>This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
                 </div>
@@ -116,11 +117,11 @@
             <div class="comments__divider"></div>
 
             <article class="comments__card">
-                <img class="comments__avatar" src="./assets/Images/Mohan-muruge.jpg">
+                <div class="comments__avatar"></div>
                 <div class="comments__card-text-container">
                     <div class="comments__card-header">
-                        <p>Emilie Beach</p>
-                        <p>01/09/2021</p>
+                        <p class="comments__card-name">Emilie Beach</p>
+                        <p class="comments__card-date">01/09/2021</p>
                     </div>
                     <p>I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.</p>
                 </div>
@@ -128,11 +129,11 @@
             <div class="comments__divider"></div>
 
             <article class="comments__card">
-                <img class="comments__avatar" src="./assets/Images/Mohan-muruge.jpg">
+                <div class="comments__avatar"></div>
                 <div class="comments__card-text-container">
                     <div class="comments__card-header">
-                        <p>Miles Acosta</p>
-                        <p>12/20/2020</p>
+                        <p class="comments__card-name">Miles Acosta</p>
+                        <p class="comments__card-date">12/20/2020</p>
                     </div>
                     <p>I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.</p>
                 </div>
