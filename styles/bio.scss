@@ -91,3 +91,43 @@
         }
     }
 }
+
+
+// MARK: COMMENTS
+.comments{
+    padding: $padding-between-components-mobile;
+    background-color: $primary-white;
+
+    &__input{
+        display: flex;
+    }
+
+    &__avatar{
+        width: $avatar-dimen-mobile;
+        height: $avatar-dimen-mobile;
+        border-radius: 50%;
+    }
+
+    &__input-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__card{
+        display: flex;
+    }
+
+    &__card-text-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__card-header{
+        display: flex;
+    }
+
+    &__divider{
+        height: 1px;
+        background-color: $primary-silver;
+    }
+}

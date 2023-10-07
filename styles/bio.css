@@ -395,4 +395,35 @@ p {
   .gallery__item {
     max-width: 100%;
   }
+}
+
+.comments {
+  padding: 1rem;
+  background-color: #ffffff;
+}
+.comments__input {
+  display: flex;
+}
+.comments__avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+}
+.comments__input-container {
+  display: flex;
+  flex-direction: column;
+}
+.comments__card {
+  display: flex;
+}
+.comments__card-text-container {
+  display: flex;
+  flex-direction: column;
+}
+.comments__card-header {
+  display: flex;
+}
+.comments__divider {
+  height: 1px;
+  background-color: #afafaf;
 }/*# sourceMappingURL=bio.css.map */

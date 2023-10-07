@@ -38,7 +38,7 @@
     <main>
 
         <!-- MARK: ABOUT -->
-        <article class="about">
+        <section class="about">
             <h1>About the Musicians</h1>
 
             <div class="about__inner-container">
@@ -59,11 +59,11 @@
                     </p>
                 </div>
             </div>
-        </article>
+        </section>
 
 
         <!-- MARK: PHOTO GALLERY -->
-        <article class="gallery">
+        <section class="gallery">
             <h1>Photo Gallery</h1>
 
             <div class="gallery__photos">
@@ -79,7 +79,67 @@
                 <img class="gallery__item" src="./assets/Images/Photo-gallery-8.jpg" alt="Image of a DJ board">
                 <img class="gallery__item" src="./assets/Images/Photo-gallery-9.jpg" alt="Picture of a crowd">
             </div>
-        </article>
+        </section>
+
+
+
+        <!-- MARK: COMMENTS -->
+        <section class="comments">
+            <h1>Join the Conversation</h1>
+
+            <!-- MARK: INPUT FORM -->
+            <article class="comments__input">
+                <img class="comments__avatar" src="./assets/Images/Mohan-muruge.jpg">
+                
+                <form class="comments__input-container">
+                    <label for="username">Name</label>
+                    <input type="text" name="username" placeholder="Enter your name" required/>
+
+                    <label for="comment">Comment</label>
+                    <textarea name="comment" placeholder="Add a new comment" required></textarea>
+
+                    <button class="btn" type="submit">Comment</button>
+                </form>
+            </article>
+
+            <!-- MARK: POSTED COMMENTS -->
+            <article class="comments__card">
+                <img class="comments__avatar" src="./assets/Images/Mohan-muruge.jpg">
+                <div class="comments__card-text-container">
+                    <div class="comments__card-header">
+                        <p>Connor Walton</p>
+                        <p>02/17/2021</p>
+                    </div>
+                    <p>This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.</p>
+                </div>
+            </article>
+            <div class="comments__divider"></div>
+
+            <article class="comments__card">
+                <img class="comments__avatar" src="./assets/Images/Mohan-muruge.jpg">
+                <div class="comments__card-text-container">
+                    <div class="comments__card-header">
+                        <p>Emilie Beach</p>
+                        <p>01/09/2021</p>
+                    </div>
+                    <p>I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.</p>
+                </div>
+            </article>
+            <div class="comments__divider"></div>
+
+            <article class="comments__card">
+                <img class="comments__avatar" src="./assets/Images/Mohan-muruge.jpg">
+                <div class="comments__card-text-container">
+                    <div class="comments__card-header">
+                        <p>Miles Acosta</p>
+                        <p>12/20/2020</p>
+                    </div>
+                    <p>I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.</p>
+                </div>
+            </article>
+            <div class="comments__divider"></div>
+
+        </section>
     </main>
 
 
