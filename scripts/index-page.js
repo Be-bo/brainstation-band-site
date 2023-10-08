@@ -21,8 +21,8 @@ class Comment{
         return this.#comment;
     }
 
-    getDDMMYYY(){
-        const date = new Date(this.#timestamp); // convert to millis
+    getDDMMYYYY(){
+        const date = new Date(this.#timestamp);
 
         const m = (date.getMonth() + 1).toString().padStart(2, '0');
         const d = date.getDate().toString().padStart(2, '0');
@@ -39,7 +39,14 @@ commentArray = [
 ];
 
 function displayComment(comment){
-    // TODO
+    let commentsList = document.querySelector(".comments__list");
+    let commentsCard = document.createElement("article");
+    commentsCard.classList.add("comments__card");
+    // TODO: the rest of the comment elements
+    commentsList.appendChild(commentsCard);
+
+    // MARK: DELETE
+    // dateDetailEl.innerText = artist.date;
 }
 
 function clearComments(){
@@ -49,15 +56,14 @@ function clearComments(){
 const form = document.getElementById("comments-form");
 form.addEventListener('submit', function(e){
 
-    // defaults
     e.preventDefault();
     const nameInput = e.target.username.value;
     const commentInput = e.target.comment.value;
 
-    // basic input checking
     if(nameInput.length > 0 && commentInput > 0){
-        commentArray.push(new Comment(nameInput, Date.now(), commentInput));
+        commentArray.unshift(new Comment(nameInput, Date.now(), commentInput));
         clearComments();
         for(let i = 0; i<commentArray.length; i++) displayComment(commentArray[i]);
+        form.reset();
     }
 });

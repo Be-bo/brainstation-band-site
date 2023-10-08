@@ -195,6 +195,12 @@
         }
     }
 
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: $padding-between-components-mobile;
+    }
+
     &__card{
         display: flex;
         gap: $padding-between-components-mobile;

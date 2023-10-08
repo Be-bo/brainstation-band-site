@@ -543,6 +543,11 @@ textarea:focus {
     padding-top: 2.25rem;
   }
 }
+.comments__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .comments__card {
   display: flex;
   gap: 1rem;
