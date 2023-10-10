@@ -28,7 +28,7 @@ class Comment{
         const d = date.getDate().toString().padStart(2, '0');
         const y = date.getFullYear();
 
-        return '${m}/${d}/${y}';
+        return `${m}/${d}/${y}`; // must use backticks
     }
 }
 
@@ -40,17 +40,35 @@ commentArray = [
 
 function displayComment(comment){
     let commentsList = document.querySelector(".comments__list");
-    let commentsCard = document.createElement("article");
-    commentsCard.classList.add("comments__card");
-    // TODO: the rest of the comment elements
-    commentsList.appendChild(commentsCard);
+    let card = document.createElement("article"); card.classList.add("comments__card");
+    let avatar = document.createElement("div"); avatar.classList.add("comments__avatar");
+    let cardContainer = document.createElement("div"); cardContainer.classList.add("comments__card-text-container");
+    let cardHeader = document.createElement("div"); cardHeader.classList.add("comments__card-header");
+    let cardName = document.createElement("p"); cardName.classList.add("comments__card-name");
+    let cardDate = document.createElement("p"); cardDate.classList.add("comments__card-date");
+    let cardComment = document.createElement("p"); cardComment.classList.add("comments__card-comment");
+    let cardDivider = document.createElement("div"); cardDivider.classList.add("comments__divider");
 
-    // MARK: DELETE
-    // dateDetailEl.innerText = artist.date;
+    card.appendChild(avatar);
+    card.appendChild(cardContainer);
+    cardContainer.appendChild(cardHeader);
+    cardHeader.appendChild(cardName);
+    cardHeader.appendChild(cardDate);
+    cardContainer.appendChild(cardComment);
+
+    commentsList.appendChild(cardDivider);
+    commentsList.appendChild(card);
+
+    cardName.innerText = comment.getUsername();
+    cardDate.innerText = comment.getDDMMYYYY();
+    cardComment.innerText = comment.getComment();
 }
 
 function clearComments(){
-    // TODO
+    let cards = document.querySelectorAll(".comments__card");
+    for(let i = 0; i<cards.length; i++) cards[i].remove();
+    let dividers = document.querySelectorAll(".comments__divider");
+    for(let i = 0; i<dividers.length; i++) dividers[i].remove();
 }
 
 const form = document.getElementById("comments-form");
@@ -60,7 +78,7 @@ form.addEventListener('submit', function(e){
     const nameInput = e.target.username.value;
     const commentInput = e.target.comment.value;
 
-    if(nameInput.length > 0 && commentInput > 0){
+    if(nameInput.length > 0 && commentInput.length > 0){
         commentArray.unshift(new Comment(nameInput, Date.now(), commentInput));
         clearComments();
         for(let i = 0; i<commentArray.length; i++) displayComment(commentArray[i]);
