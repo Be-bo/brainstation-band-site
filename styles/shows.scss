@@ -73,6 +73,7 @@
 
     &__card{
         padding: 0 $padding-between-components-mobile $padding-between-components-mobile $padding-between-components-mobile;
+        cursor: pointer;
 
         @include tablet{
             display: flex;
@@ -81,6 +82,10 @@
             align-items: center;
             padding: $padding-between-components-mobile;
         }
+    }
+
+    &__card:hover{
+        background-color: $secondary-alabaster;
     }
 
     &__divider{

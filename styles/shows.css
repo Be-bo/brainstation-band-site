@@ -164,6 +164,7 @@ textarea:focus {
 }
 @media (min-width: 768px) {
   .nav-bar__logo {
+    margin-top: 0;
     padding: 2.25rem;
   }
 }
@@ -199,7 +200,7 @@ textarea:focus {
     flex: 0;
     padding: 0;
     align-self: stretch;
-    margin-top: 3.375rem;
+    margin-top: 2.25rem;
   }
 }
 
@@ -424,6 +425,7 @@ textarea:focus {
 }
 .shows__card {
   padding: 0 1rem 1rem 1rem;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .shows__card {
@@ -433,6 +435,9 @@ textarea:focus {
     align-items: center;
     padding: 1rem;
   }
+}
+.shows__card:hover {
+  background-color: #fafafa;
 }
 .shows__divider {
   height: 1px;

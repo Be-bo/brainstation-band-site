@@ -1,3 +1,4 @@
+// MARK: DAT
 class Comment{
     #username = "Username";
     #timestamp = 0;
@@ -38,6 +39,8 @@ commentArray = [
     new Comment("Miles Acosta", 1608451948000, "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.")
 ];
 
+
+// MARK: FUNCTIONS
 function displayComment(comment){
     let commentsList = document.querySelector(".comments__list");
     let card = document.createElement("article"); card.classList.add("comments__card");
@@ -71,6 +74,8 @@ function clearComments(){
     for(let i = 0; i<dividers.length; i++) dividers[i].remove();
 }
 
+
+// MARK: MAIN
 const form = document.getElementById("comments-form");
 form.addEventListener('submit', function(e){
 
