@@ -101,6 +101,12 @@
         }
     }
 
+    &__bio-title{
+        flex: 1;
+        padding-top: 0;
+        transform: translateY(35%);
+    }
+
     &__iframe{
         @include desktop{
             flex: 1;

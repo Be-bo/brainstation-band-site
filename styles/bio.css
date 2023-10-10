@@ -250,6 +250,11 @@ textarea:focus {
     padding-top: 2.25rem;
   }
 }
+.hero__bio-title {
+  flex: 1;
+  padding-top: 0;
+  transform: translateY(35%);
+}
 @media (min-width: 1280px) {
   .hero__iframe {
     flex: 1;
@@ -459,6 +464,11 @@ textarea:focus {
     padding-left: 2.25rem;
   }
 }
+@media (min-width: 1280px) {
+  .comments__title {
+    padding-left: 4.5rem;
+  }
+}
 .comments__container {
   display: flex;
   flex-direction: column;
@@ -474,6 +484,7 @@ textarea:focus {
 }
 @media (min-width: 1280px) {
   .comments__container {
+    padding: 0 4.5rem 4.5rem 4.5rem;
     max-width: 1280px;
   }
 }
