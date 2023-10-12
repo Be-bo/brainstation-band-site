@@ -74,7 +74,7 @@ async function pullComments(api){
 			commentObjects[i].timestamp,
 			commentObjects[i].comment,
 			);
-		comments.unshift(currentComment);
+		comments.push(currentComment);
 	}
 
 	console.log(commentObjects);
@@ -86,7 +86,7 @@ async function pullComments(api){
 // MARK: MAIN
 let apiObject = new Api();
 const form = document.getElementById("comments-form");
-// clearComments();
+clearComments();
 pullComments(apiObject);
 
 form.addEventListener("submit", async function (e) {

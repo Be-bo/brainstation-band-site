@@ -11,6 +11,10 @@ class Show {
 		this.#location = location;
 	}
 
+	getTimestamp(){
+		return this.#timestamp;
+	}
+
 	getVenue() {
 		return this.#venue;
 	}

@@ -50,17 +50,17 @@ class Api {
 
 	getShows() {
         const url = this.#baseURL + "/showdates";
-		axios
+		return axios
 			.get(url, {
 				params: {
 					api_key: this.#apiKey,
 				},
 			})
 			.then(response => {
-				console.log(response.data);
+				return(response.data);
 			})
 			.catch(errur => {
-				console.log(errur);
+				console.error(errur.message);
 			});
 	}
 }

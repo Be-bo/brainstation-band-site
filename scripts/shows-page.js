@@ -84,7 +84,7 @@ function displayShow(show) {
 	showsList.appendChild(divider);
 }
 
-function clearList() {
+function clearShows() {
 	let items = document.querySelectorAll(".shows__card");
 	for (let i = 0; i < items.length; i++) items[i].remove();
 	let dividers = document.querySelectorAll(".shows__divider");
@@ -93,16 +93,39 @@ function clearList() {
 	header.remove();
 }
 
-// MARK: MAIN
-// clearList();
-var selectedRow = null;
-displayShowsHeader();
-for (let i = 0; i < shows.length; i++) displayShow(shows[i]);
-let rows = document.querySelectorAll(".shows__card");
-for (let i = 0; i < rows.length; i++) {
-	rows[i].addEventListener("click", function (e) {
-		if (selectedRow != null) selectedRow.style.backgroundColor = ""; // revert to the original style
-		selectedRow = rows[i];
-		selectedRow.style.backgroundColor = "#E1E1E1";
-	});
+function attachListeners(){
+	let rows = document.querySelectorAll(".shows__card");
+	for (let i = 0; i < rows.length; i++) {
+		rows[i].addEventListener("click", function (e) {
+			if (selectedRow != null) selectedRow.style.backgroundColor = ""; // revert to the original style
+			selectedRow = rows[i];
+			selectedRow.style.backgroundColor = "#E1E1E1";
+		});
+	}	
 }
+
+async function pullShows(api){
+	let showObjects = await api.getShows();
+	let shows = [];	
+
+	for(let i = 0; i<showObjects.length; i++){
+		const newShow = new Show(
+			showObjects[i].date,
+			showObjects[i].place,
+			showObjects[i].location
+		);
+		shows.push(newShow);
+	}
+
+	console.log(showObjects);
+	shows.sort((item1, item2) => item1.getTimestamp() - item2.getTimestamp());
+	for(let i = 0; i<shows.length; i++) displayShow(shows[i]);
+	attachListeners();
+}
+
+
+// MARK: MAIN
+let selectedRow = null;
+let api = new Api();
+displayShowsHeader();
+pullShows(api);
